@@ -5,7 +5,7 @@ from selenium.webdriver.support.select import Select
 
 class CreateAccountTests():
 
-    def CreateAccountTest(self):
+    def create_account_test(self):
         driver = webdriver.Firefox()
         base_url = "http://automationpractice.com/index.php"
         driver.maximize_window()
@@ -47,6 +47,9 @@ class CreateAccountTests():
         except:
             print("Header not found. Header found was: " + account_header)
 
+        driver.quit()
+        # Ideally we want a tear_down method that deletes cookies after each test, quits browser, etc.
+
 
 create_account_test = CreateAccountTests()
-create_account_test.CreateAccountTest()
+create_account_test.create_account_test()
