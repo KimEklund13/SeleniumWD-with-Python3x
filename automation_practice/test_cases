@@ -1,0 +1,73 @@
+Test Cases that cover Selenium methods
+1. Find elements, send keys, assert title, selecting from drop-downs, executing js scripts (scroll)
+2. More practice sending keys and assert current page
+3. Hovering, executing command when element appears
+4. Switching focus to alerts, interacting with custom alert elements
+5. Asserting a list of elements on a given view
+6. Reusing methods, asserting dynamic text on an element
+
+- automationpractice.com
+
+Feature: Basic smoke tests for an automation demo
+
+Scenario: I should be able to create an account
+    Given I am on the "home screen"
+    When I click the "sign in" button
+    And I type my "email address" into the "create account" field
+    And I click the "Create Account" button
+    And I fill out the "create account" form
+    And I click the "register" button
+    Then I should see the "My Account" screen
+
+Scenario: I should be able to login
+    Given I am on the "home screen"
+    When I click the "sign in" button
+    And I type my "email address" into the "sign in email" field -- (kimeklund13@gmail.com)
+    And I type my "password" into the "sign in password" field  -- (test123)
+    And I click the "sign in" button
+    Then I should see the "My Account" screen
+
+Scenario: I should be able to make a purchase after signing in
+    Given I am on the "home screen"
+    When I "sign in"
+    And I tap the "women" button
+    And I hover over the "first item"
+    And I click the "add to cart" button
+    And I click the "proceed to checkout" button on the "confirm popup"
+    And I click the "proceed to checkout" button on the "purchase summary screen"
+    And I click the "proceed to checkout" button on the "addresses screen"
+    And I click the "I agree to terms" button
+    And I click the "proceed to checkout" button on the "shipping screen"
+    And I click the "pay by bank wire" button
+    And I click the "confirm order" button
+    Then I should see the "order confirmation" screen
+
+Scenario: I should be able to open the "quick view" of an item and add it to my cart
+    Given I am on the "home screen"
+    When I hover over the "first item"
+    And I click the "quick view" button
+    And I click the "add to cart" button on the "quick view"
+    Then I should see the "Product successfully added to your shopping cart" message
+
+Scenario: I should see all the elements on the "quick view"
+    Given I am on the "home screen"
+    When I hover over the "first item"
+    And I click the "quick view" button
+    Then I should see the following:
+    | element       |
+    | product_main  |
+    | product_1     |
+    | product_2     |
+    | product_3     |
+    | description   |
+    | twitter       |
+    | facebook      |
+    | google+       |
+    | pinterest     |
+    | price_test    |
+
+Scenario: I should see I have an item in my cart on the home screen
+     Given I am on the "home screen"
+     When I add an item to my cart --> reuse the anon quick view methods
+     And I click the "continue shopping" button on the "quick view"
+     Then I should see "1" item in my cart
