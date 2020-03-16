@@ -1,7 +1,7 @@
 Test Cases that cover Selenium methods
 1. Find elements, send keys, assert title, selecting from drop-downs, executing js scripts (scroll)
 2. More practice sending keys and assert current page
-3. Hovering, executing command when element appears
+3. Hovering, executing command when element appears, unittest assertion
 4. Switching focus to alerts, interacting with custom alert elements
 5. Asserting a list of elements on a given view
 6. Reusing methods, asserting dynamic text on an element
