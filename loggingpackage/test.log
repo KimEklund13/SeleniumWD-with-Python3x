@@ -1,0 +1,4 @@
+WARNING:root:warning message
+INFO:root:this is an info message
+DEBUG:root:this is a debug message
+ERROR:root:error message here
