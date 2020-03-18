@@ -1,0 +1,4 @@
+03/17/2020 11:40:23 PM: - method3 INFO: info message
+03/17/2020 11:40:23 PM: - method3 WARNING: warning message
+03/17/2020 11:40:23 PM: - method3 ERROR: error message
+03/17/2020 11:40:23 PM: - method3 CRITICAL: critical message
