@@ -1,4 +1,5 @@
-WARNING:root:warning message
-INFO:root:this is an info message
-DEBUG:root:this is a debug message
-ERROR:root:error message here
+03/17/2020 10:51:33 PM - LoggerDemoConf - DEBUG - debug messages
+03/17/2020 10:51:33 PM - LoggerDemoConf - INFO - info message
+03/17/2020 10:51:33 PM - LoggerDemoConf - WARNING - warn message
+03/17/2020 10:51:33 PM - LoggerDemoConf - ERROR - error message
+03/17/2020 10:51:33 PM - LoggerDemoConf - CRITICAL - critical message
