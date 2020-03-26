@@ -1,5 +1,6 @@
 from selenium import webdriver
 
+
 class SignInTests():
 
     def sign_in_test(self):
@@ -23,7 +24,6 @@ class SignInTests():
             print("login unsuccessful")
 
         driver.quit()
-
 
 
 create_account_test = SignInTests()
