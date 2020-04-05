@@ -5,16 +5,42 @@ class LoginPage():
     def __init__(self, driver):
         self.driver = driver
 
+    # Locators
+    _login_link = "Login"
+    _email_field = "user_email"
+    _password_field = "user_password"
+    _login_button = "commit"
 
-    def login(self, username, password):
-        login_link = self.driver.find_element(By.LINK_TEXT, "Login")
-        login_link.click()
+    def getLoginLink(self):
+        return self.driver.find_element(By.LINK_TEXT, self._login_link)
 
-        email_field = self.driver.find_element(By.ID, "user_email")
-        email_field.send_keys(username)
+    def getEmailField(self):
+        return self.driver.find_element(By.ID, self._email_field)
 
-        password_field = self.driver.find_element(By.ID, "user_password")
-        password_field.send_keys(password)
+    def getPasswordField(self):
+        return self.driver.find_element(By.ID, self._password_field)
 
-        login_button = self.driver.find_element(By.NAME, "commit")
-        login_button.click()
+    def getLoginButton(self):
+        return self.driver.find_element(By.NAME, self._login_button)
+
+
+    # Actions
+    def clickLoginLink(self):
+        self.getLoginLink().click()
+
+    def enterEmail(self, email):
+        self.getEmailField().send_keys(email)
+
+    def enterPassword(self, password):
+        self.getPasswordField().send_keys(password)
+
+    def clickLoginButton(self):
+        self.getLoginButton().click()
+
+
+    # methods called by test files
+    def login(self, email, password):
+        self.clickLoginLink()
+        self.enterEmail(email)
+        self.enterPassword(password)
+        self.clickLoginButton()
