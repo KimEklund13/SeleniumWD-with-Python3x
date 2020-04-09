@@ -1,0 +1,8 @@
+04/06/2020 10:58:39 PM: - SeleniumDriver INFO: Element found with locator Login and locator type: link
+04/06/2020 10:58:40 PM: - SeleniumDriver INFO: clicked on element with locator: Login locator type as: link
+04/06/2020 10:58:42 PM: - SeleniumDriver INFO: Element found with locator user_email and locator type: id
+04/06/2020 10:58:42 PM: - SeleniumDriver INFO: sent text on element with locator: user_email locator type as: id
+04/06/2020 10:58:42 PM: - SeleniumDriver INFO: Element found with locator user_password and locator type: id
+04/06/2020 10:58:43 PM: - SeleniumDriver INFO: sent text on element with locator: user_password locator type as: id
+04/06/2020 10:58:43 PM: - SeleniumDriver INFO: Element found with locator commit and locator type: name
+04/06/2020 10:58:47 PM: - SeleniumDriver INFO: clicked on element with locator: commit locator type as: name

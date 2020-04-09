@@ -9,10 +9,8 @@ class HandyWrappers():
     def __init__(self, driver):
         self.driver = driver
 
-    def getByType(self, locatorType):  # By which type you want to find the element (ID, Xpath, CSS..)
-        # This method gets the By type (.ID, .XPATH, .CLASS) etc.
-        # The return on this is used for the next getElement method
-        locatorType = locatorType.lower()  # convert to lower case
+    def getByType(self, locatorType):
+        locatorType = locatorType.lower()
         if locatorType == "id":
             return By.ID
         elif locatorType == "xpath":
@@ -57,6 +55,7 @@ class HandyWrappers():
             return False
 
     def elementListChecker(self, locator, byType):
+        # another way of doing finding an element, same logic as isElementPresent()
         try:
             elementsList = self.driver.find_elements(byType, locator)
             if len(elementsList) > 0:
