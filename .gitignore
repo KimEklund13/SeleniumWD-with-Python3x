@@ -2,3 +2,11 @@
 */geckodriver.log
 */~$thon Study Guide.docx
 */__pycache__/
+assets/
+htmlreport.html
+letskodeit/base/__pycache__/
+letskodeit/pages/__pycache__/
+letskodeit/pages/home/__pycache__/
+letskodeit/tests/__pycache__/
+letskodeit/tests/home/__pycache__/
+letskodeit/utilities/__pycache__/
